@@ -37,11 +37,12 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 private val ellasCalculator = CalculatorInput()
 @RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
 @Composable
-fun Calculator(modifier: Modifier = Modifier){
+fun Calculator(navController: NavController, modifier: Modifier = Modifier){
     var calValue: String? by remember { mutableStateOf("") }
 
     Column(
@@ -238,9 +239,9 @@ fun CalculatorBtn(txtBtn : String,
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
-@Preview(showBackground = true)
-@Composable
-fun AppPreview(modifier: Modifier = Modifier) {
-    Calculator()
-}
+//@RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
+//@Preview(showBackground = true)
+//@Composable
+//fun AppPreview(modifier: Modifier = Modifier) {
+//    Calculator()
+//}
